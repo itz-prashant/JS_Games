@@ -5,4 +5,28 @@
 }
 body{
     background-color: #302e2b;
+    height: 100vh;
+    width: full;
+    margin: auto;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    width: 72vw;
+    height: 96vh;
+}
+.rowelm{
+    width: full;
+    height: 12vh;
+    display: flex;
+}
+.square{
+    width: 9vw;
+    height: 12vh;
+}
+.white{
+    background-color: #eeeed2;
+}
+.black{
+    background-color: #769656;
 }
