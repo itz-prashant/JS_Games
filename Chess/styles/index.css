@@ -12,7 +12,7 @@ body{
 #root{
     display: flex;
     flex-direction: column;
-    width: 72vw;
+    max-width: 64vw;
     height: 96vh;
 }
 .rowelm{
@@ -21,7 +21,14 @@ body{
     display: flex;
 }
 .square{
-    width: 9vw;
+    width: 8vw;
+    height: 12vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.piece{
+    width: 8vw;
     height: 12vh;
 }
 .white{
