@@ -1,5 +1,5 @@
 import * as piece from "../data/pieces.js";
-const rootDiv = document.getElementById('root')
+import { rootDiv } from "../helper/constant.js";
 
 function initGameRender(data) {
     

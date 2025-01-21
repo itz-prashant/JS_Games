@@ -30,6 +30,7 @@ body{
 .piece{
     width: 8vw;
     height: 12vh;
+    cursor: grab
 }
 .white{
     background-color: #eeeed2;
