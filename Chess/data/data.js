@@ -1,7 +1,12 @@
-// For each Square
+import { renderHighlight } from "../render/main.js";
 
 function square(color, id, piece){
-    return {color, id, piece}
+
+    const highlightCircle = function (state){
+        renderHighlight(this.id)   
+        this.highlighted = true
+    }
+    return {color, id, piece, highlightCircle}
 }
 
 function squareRow(rowId){

@@ -1,5 +1,7 @@
 import * as piece from "../data/pieces.js";
 import { rootDiv } from "../helper/constant.js";
+import { globalState } from "../index.js";
+
 
 function initGameRender(data) {
     
@@ -85,4 +87,30 @@ function pieceRender(data) {
     })
 }
 
-export {initGameRender};
+function renderHighlight(squareId) {
+    const highlightSpan = document.createElement('span')
+    highlightSpan.classList.add('highlight')
+    document.getElementById(squareId).appendChild(highlightSpan)
+}
+
+function clearAllHighlight() {
+    const flatData = globalState.flat();
+   flatData.forEach(el=>{
+     if(el.highlighted){
+        document.getElementById(el.id).innerHTML = ""
+        el.highlighted = false
+     }
+   }) 
+}
+
+function selfHighlight(piece) {
+    document.getElementById(piece.currentPosition).classList.add('yellow-highlihgt')
+}
+
+function removeSelfHighlight(piece) {
+    if(piece){
+        document.getElementById(piece.currentPosition).classList.remove('yellow-highlihgt')
+    }
+}
+
+export {initGameRender, renderHighlight, clearAllHighlight, selfHighlight, removeSelfHighlight};

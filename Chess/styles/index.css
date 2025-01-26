@@ -30,11 +30,21 @@ body{
 .piece{
     width: 8vw;
     height: 12vh;
-    cursor: grab
+    cursor: grab;
+    
 }
 .white{
     background-color: #eeeed2;
 }
 .black{
     background-color: #769656;
+}
+.highlight{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.yellow-highlihgt{
+    background-color: #f7f769;
 }
